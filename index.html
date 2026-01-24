@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelPlay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PixelPlay</h1>
+      <p>Tap in & play your favorites!</p>
+    </header>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search games..."
+        onkeyup="filterGames()"
+      />
+    </div>
+
+    <section class="games" id="gamesList">
+      <div class="game"><a href="10m.html">10 Minutes Till Dawn</a></div>
+      <div class="game"><a href="2048.html">2048</a></div>
+      <div class="game"><a href="DM.html">Drive Mad</a></div>
+      <div class="game"><a href="Minecraft.html">Minecraft</a></div>
+      <div class="game"><a href="among.html">Among Us</a></div>
+      <div class="game"><a href="bitlife.html">Bitlife</a></div>
+      <div class="game"><a href="block.html">Block Blast</a></div>
+      <div class="game"><a href="bow.html">BowMaster</a></div>
+      <div class="game"><a href="brainrot.html">Steal A Brainrot</a></div>
+      <div class="game"><a href="burrito.html">Burrito Bison</a></div>
+      <div class="game"><a href="cookie.html">Cookie Clicker</a></div>
+      <div class="game"><a href="cattle.html">Crazy Cattle</a></div>
+      <div class="game"><a href="drift.html">Drift Boss</a></div>
+      <div class="game"><a href="fnaf.html">FNAF 1</a></div>
+      <div class="game"><a href="fnaf2.html">FNAF 2</a></div>
+      <div class="game"><a href="fnaf3.html">FNAF 3</a></div>
+      <div class="game"><a href="fnaf4.html">FNAF 4</a></div>
+      <div class="game"><a href="geo.html">Geometry Dash</a></div>
+      <div class="game"><a href="glad.html">Gladihoppers</a></div>
+      <div class="game"><a href="grow.html">Grow A Garden</a></div>
+      <div class="game"><a href="hole.html">Hole.io</a></div>
+      <div class="game"><a href="hook.html">Stickman Hook</a></div>
+      <div class="game"><a href="jetpack.html">Jetpack Joyride</a></div>
+      <div class="game"><a href="lol.html">1V1.LOL</a></div>
+      <div class="game"><a href="plant.html">Plants VS Zombies</a></div>
+      <div class="game"><a href="poly.html">Polytrack</a></div>
+      <div class="game"><a href="quake.html">Quake III Arena</a></div>
+      <div class="game"><a href="rag.html">Ragdoll Hit</a></div>
+      <div class="game"><a href="sand.html">SandBox City</a></div>
+      <div class="game"><a href="slither.html">Slither.io</a></div>
+      <div class="game"><a href="sword.html">Swordfight!!!</a></div>
+      <div class="game"><a href="tank.html">Tank</a></div>
+      <div class="game"><a href="temple.html">Temple Run</a></div>
+      <div class="game"><a href="time.html">Time Shooter</a></div>
+      <div class="game"><a href="vietnam.html">Baby Sniper in Vietnam</a></div>
+      <div class="game"><a href="wheels.html">HappyWheels</a></div>
+      <div class="game"><a href="hobo1.html">Hobo 1</a></div>
+      <div class="game"><a href="hobo2.html">Hobo 2</a></div>
+      <div class="game"><a href="hobo3.html">Hobo 3</a></div>
+      <div class="game"><a href="hobo4.html">Hobo 4</a></div>
+      <div class="game"><a href="hobo5.html">Hobo 5</a></div>
+      <div class="game"><a href="hobo6.html">Hobo 6</a></div>
+      <div class="game"><a href="hobo7.html">Hobo 7</a></div>
+      <div class="game"><a href="karatebros.html">Karate Bros</a></div>
+      <div class="game"><a href="subway.html">Subway Surfers</a></div>
+      <div class="game"><a href="snowrider.html">SnowRider 3D</a></div>
+      <div class="game"><a href="basketbros.html">Basket Bros</a></div>
+      <div class="game">
+        <a href="henry1.html">Henry Stickmin Breaking The Bank</a>
+      </div>
+      <div class="game">
+        <a href="henry2.html">Henry Stickmin Escaping The Prison</a>
+      </div>
+      <div class="game">
+        <a href="henry3.html">Henry Stickmin Fleeing The Complex</a>
+      </div>
+      <div class="game">
+        <a href="henry4.html">Henry Stickmin Infiltrating The Airship</a>
+      </div>
+      <div class="game">
+        <a href="henry5.html">Henry Stickmin Stealing The Diamond</a>
+      </div>
+      <div class="game"><a href="hextris.html">Hextris</a></div>
+    </section>
+
+    <script>
+      function filterGames() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const games = document.querySelectorAll(".game");
+        games.forEach((game) => {
+          const title = game.textContent.toLowerCase();
+          game.style.display = title.includes(input) ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>
